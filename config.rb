@@ -78,10 +78,8 @@ use Rack::Codehighlighter,
   :markdown => true
 
 activate :deploy do |deploy|
-  deploy.method = :rsync
-  deploy.user = "cappuccino"
-  deploy.host = "cappuccino.slevenbits.com"
-  deploy.path = "/www/cappuccino.org/www/"
+  deploy.method = :git
+  deploy.branch = 'master'
   deploy.clean = true
 end
 
